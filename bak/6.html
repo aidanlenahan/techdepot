@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .banner {
+            width: 100%;
+            height: 114px;
+            background: url('banner.png') no-repeat center center;
+            background-size: cover;
+        }
+        .nav-bar {
+            width: 100%;
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 114px; /* This should be equal to the height of the banner */
+            left: 0;
+            z-index: 10; /* Ensures the nav bar stays above other content */
+        }
+        .nav-bar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+            font-size: 16px;
+            display: inline-block;
+        }
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-top: 20px; /* To make space for the fixed nav bar */
+        }
+        .section {
+            display: none; /* Hide all sections by default */
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .section.active {
+            display: block; /* Show the active section */
+        }
+        .product-title {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .product-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .product-details h2 {
+            font-size: 20px;
+            color: #555;
+        }
+        .product-details p {
+            margin: 10px 0;
+        }
+        .highlight {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 22px;
+            color: #5cb85c;
+            font-weight: bold;
+        }
+        .buy-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            margin: 20px 0;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        /* Mobile-friendly styles */
+        @media (max-width: 768px) {
+            .nav-bar {
+                padding: 10px 0;
+                font-size: 14px;
+            }
+            .nav-bar a {
+                padding: 0 10px;
+                display: block;
+                margin-bottom: 5px;
+            }
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            .product-title {
+                font-size: 20px;
+            }
+            .product-details h2 {
+                font-size: 18px;
+            }
+            .price {
+                font-size: 20px;
+            }
+            .buy-button {
+                font-size: 16px;
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="nav-bar">
+        <a href="#" onclick="showSection('item-description')">Item Description</a>
+        <a href="#" onclick="showSection('shipping-returns')">Shipping and Returns</a>
+        <a href="#" onclick="showSection('feedback')">Feedback</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+        <a href="#" onclick="showSection('about-us')">About Us</a>
+    </div>
+    <div class="container">
+        <div class="section" id="item-description">
+            <h1 class="product-title">[Product Title]</h1>
+            <img src="[Product Image URL]" alt="[Product Title]" class="product-image">
+            <div class="product-details">
+                <h2>Product Details:</h2>
+                <p>[Product Description]</p>
+                <p>Brand: <span class="highlight">[Brand Name]</span></p>
+                <p>Model: <span class="highlight">[Model Number]</span></p>
+                <p>Condition: <span class="highlight">[Condition]</span></p>
+            </div>
+            <p class="price">Price: $[Price]</p>
+            <a href="[eBay Listing URL]" class="buy-button">Buy Now</a>
+        </div>
+        <div class="section" id="shipping-returns">
+            <h2>Shipping and Returns</h2>
+            <p>[Shipping and Returns Information]</p>
+        </div>
+        <div class="section" id="feedback">
+            <h2>Feedback</h2>
+            <p>[Feedback Information]</p>
+        </div>
+        <div class="section" id="contact">
+            <h2>Contact</h2>
+            <p>[Contact Information]</p>
+        </div>
+        <div class="section" id="about-us">
+            <h2>About Us</h2>
+            <p>[About Us Information]</p>
+        </div>
+    </div>
+    <script>
+        function showSection(id) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Show the selected section
+            const selectedSection = document.getElementById(id);
+            selectedSection.classList.add('active');
+        }
+
+        // Default to showing the item description section on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('item-description');
+        });
+    </script>
+</body>
+</html>
+

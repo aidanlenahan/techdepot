@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .banner {
+            width: 100%;
+            height: 114px;
+            background: url('banner.png') no-repeat center center;
+            background-size: cover;
+        }
+        .nav-bar {
+            width: 100%;
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 114px; /* This should be equal to the height of the banner */
+            left: 0;
+            z-index: 10; /* Ensures the nav bar stays above other content */
+        }
+        .nav-bar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+            font-size: 16px;
+        }
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-top: 20px; /* To make space for the fixed nav bar */
+        }
+        .product-title {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .product-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .product-details {
+            margin: 20px 0;
+        }
+        .product-details h2 {
+            font-size: 20px;
+            color: #555;
+        }
+        .product-details p {
+            margin: 10px 0;
+        }
+        .highlight {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 22px;
+            color: #5cb85c;
+            font-weight: bold;
+        }
+        .buy-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            margin: 20px 0;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="nav-bar">
+        <a href="#">Our Store</a>
+	<a href="#">Shipping and Returns
+        <a href="#">Feedback</a>
+        <a href="#">Contact</a>
+        <a href="#">About Us</a>
+    </div>
+    <div class="container">
+        <h1 class="product-title">[Product Title]</h1>
+        <img src="[Product Image URL]" alt="[Product Title]" class="product-image">
+        <div class="product-details">
+            <h2>Product Details:</h2>
+            <p>[Product Description]</p>
+            <p>Brand: <span class="highlight">[Brand Name]</span></p>
+            <p>Model: <span class="highlight">[Model Number]</span></p>
+            <p>Condition: <span class="highlight">[Condition]</span></p>
+        </div>
+        <p class="price">Price: $[Price]</p>
+        <a href="[eBay Listing URL]" class="buy-button">Buy Now</a>
+    </div>
+</body>
+</html>
+
