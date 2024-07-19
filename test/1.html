@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        @media screen and (min-width: 1200px) {
+            .w-container {
+                max-width: 1170px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>${PRODUCT.Title}</h1>
+    </div>
+    <div>
+        <div>
+            <h2>ProductDescription</h2>
+        </div>
+        <p>${PRODUCT.Description}</p>
+    </div>
+    <div>
+        <label for="image--1">
+            <span />
+        </label>
+        <img alt=" src=" ${PRODUCT.CustomFields.Image1}">
+    </div>
+    <div>
+        <div>
+            <h2>Features</h2>
+        </div>
+        <p>${PRODUCT.CustomFields.Features}</p>
+    </div>
+    <div>
+        <h2>Shipping</h2>
+    </div>
+    <p> ${PRODUCT.CustomFields.Shipping}</p>
+    </div>
+</body>
+
+</html>
